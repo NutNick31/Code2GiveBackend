@@ -23,4 +23,6 @@ urlpatterns = [
     path('api/signup/', SignupView.as_view(), name='signup'),
     path('api/signin/', SigninView.as_view(), name='signin'),
     path('api/users/', UserListView.as_view(), name='getusers'),
+    path('api/userinfo/', include('userinfo.urls')),
+    path('api/mlalgo/', include('mlalgo.urls')),
 ]
